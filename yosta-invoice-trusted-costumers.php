@@ -28,10 +28,9 @@ function yosta_turn_off_invoice( $available_gateways ) {
 		if ( isset( $available_gateways[ 'invoice' ] ) ) {
 			unset( $available_gateways[ 'invoice' ] );
 		}
-		// if you need to disable multiple payment gateways just add similar code
-		// if ( isset( $available_gateways[ 'payment_gateway_2' ] ) ) {
-		//		unset( $available_gateways[ 'payment_gateway_2' ] );
-		// }
+		if ( isset( $available_gateways[ 'direct-debit' ] ) ) {
+			unset( $available_gateways[ 'direct-debit' ] );
+		}
 	}
 
 	return $available_gateways;
