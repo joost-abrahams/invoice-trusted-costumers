@@ -20,11 +20,11 @@ add_filter( "wp_consent_api_registered_{$plugin}", '__return_true' );
 
 // Happy hacking
 
-add_filter( 'woocommerce_available_payment_gateways', 'rudr_turn_off_cod' );
+add_filter( 'woocommerce_available_payment_gateways', 'yosta_turn_off_invoice' );
   
-function rudr_turn_off_cod( $available_gateways ) {
+function yosta_turn_off_invoice( $available_gateways ) {
 	
-	if( ! current_user_can( 'trusted-costumer' ) ) {
+	if( current_user_can( 'subscriber' ) || current_user_can( 'customer' ) ) {
 		if ( isset( $available_gateways[ 'invoice' ] ) ) {
 			unset( $available_gateways[ 'invoice' ] );
 		}
