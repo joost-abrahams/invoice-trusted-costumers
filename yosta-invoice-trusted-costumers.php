@@ -2,7 +2,7 @@
 /*
 Plugin Name: Yosta invoice trusted costumers
 Description: Enable invoice payment method for trusted costumers
-Version: 0.1
+Version: 1.3
 Author: Joost Abrahams
 Author URI: https://mantablog.nl
 GitHub Plugin URI: https://github.com/joost-abrahams/nvoice-trusted-costumers/
